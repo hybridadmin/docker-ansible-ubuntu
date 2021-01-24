@@ -4,9 +4,9 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest`, `focal` (*focal/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/focal/Dockerfile)
-- [`bionic` (*bionic/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/bionic/Dockerfile)
-- [`xenial` (*xenial/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/xenial/Dockerfile)
+- [`latest`, `focal`](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/focal/Dockerfile)
+- [`bionic`](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/bionic/Dockerfile)
+- [`xenial`](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/xenial/Dockerfile)
 
 ## How to Build the image
 
