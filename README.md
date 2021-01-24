@@ -25,13 +25,12 @@ docker pull hybridadmin/ubuntu-ansible:latest
 ```
 
 Run a container using the image with the following command:
-
 ```console
 docker run -d --name systemd-ubuntu --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro hybridadmin/ubuntu-ansible:latest
 ```
 
 Use Ansible inside the container:
-```
+```console
 docker exec --tty [container_id] env TERM=xterm ansible --version
 docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check
 ```
