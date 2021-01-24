@@ -1,6 +1,6 @@
-# Ubuntu Docker Image with ansible and systemd
+# Ubuntu Docker Images with ansible and systemd
 
-Ubuntu Docker images to be used for testing ansible playbooks and roles.
+> Ubuntu Docker images to be used for testing ansible playbooks and roles.
 
 ## Supported tags and respective `Dockerfile` links
 
