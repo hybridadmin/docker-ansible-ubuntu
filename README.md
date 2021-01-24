@@ -13,7 +13,7 @@ Ubuntu 16.04 LTS (Xenial) Docker image to be used for testing ansible playbooks 
 1. Install docker
    * [Linux](https://docs.docker.com/engine/install/)
    * [Windows](https://docs.docker.com/docker-for-windows/install/)
-2. Clone the repo
+2. Clone the repo `git clone https://github.com/hybridadmin/docker-ubuntu-ansible.git`
 3. `cd` into the directory
 4. Run `docker build -t ubuntu-ansible:bionic .`
 
@@ -31,9 +31,10 @@ docker run -d --name systemd-ubuntu --privileged -v /sys/fs/cgroup:/sys/fs/cgrou
 ```
 
 Use Ansible inside the container:
-   a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
-   b. `docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check`
-
+```
+docker exec --tty [container_id] env TERM=xterm ansible --version
+docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check
+```
 
 ## Author
 
