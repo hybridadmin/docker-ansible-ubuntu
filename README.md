@@ -4,7 +4,7 @@ Ubuntu 16.04 LTS (Xenial) Docker image to be used for testing ansible playbooks 
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest` (*focal/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/focal/Dockerfile)
+- [`latest`, `focal` (*focal/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/focal/Dockerfile)
 - [`bionic` (*bionic/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/bionic/Dockerfile)
 - [`xenial` (*xenial/Dockerfile*)](https://github.com/hybridadmin/docker-ubuntu-ansible/tree/main/xenial/Dockerfile)
 
