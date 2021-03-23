@@ -24,6 +24,7 @@ RUN apt-get update \
        libffi-dev \
        libssl-dev \
        libyaml-dev \
+       python-setuptools \
        python3.7-dev \
        python3-setuptools \
        python3-pip \
@@ -47,7 +48,8 @@ RUN python3.7 -m pip install $pip_packages
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
-RUN echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+RUN echo '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts \
+    && echo '[defaults]\nstdout_callback = debug\ninterpreter_python= /usr/bin/python3' >> /etc/ansible/ansible.cfg
 
 RUN cd /lib/systemd/system/sysinit.target.wants/ \
     && ls | grep -v systemd-tmpfiles-setup | xargs rm -f $1
