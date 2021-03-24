@@ -5,7 +5,7 @@ ENV container docker
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV pip_packages "ansible"
+ENV pip_packages "ansible pymysql"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
