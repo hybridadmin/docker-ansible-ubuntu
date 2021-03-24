@@ -34,7 +34,8 @@ RUN python3 -m pip install $pip_packages
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
-RUN echo -e "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
+ADD https://raw.githubusercontent.com/hybridadmin/misc-scripts/master/linux/ansible/hosts /etc/ansible/hosts
+ADD https://raw.githubusercontent.com/hybridadmin/misc-scripts/master/linux/ansible/ansible.cfg etc/ansible/ansible.cfg
 
 RUN cd /lib/systemd/system/sysinit.target.wants/ \
     && ls | grep -v systemd-tmpfiles-setup | xargs rm -f $1
