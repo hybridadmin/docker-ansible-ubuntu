@@ -29,9 +29,6 @@ RUN locale-gen en_US.UTF-8
 # Install Ansible via Pip.
 RUN pip install $pip_packages
 
-COPY ../initctl_faker .
-RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl
-
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
 ADD https://raw.githubusercontent.com/hybridadmin/misc-scripts/master/linux/ansible/hosts /etc/ansible/hosts
