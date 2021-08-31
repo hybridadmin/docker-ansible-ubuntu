@@ -2,8 +2,12 @@ FROM ubuntu:bionic
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
 
 ENV container docker
-ENV LC_ALL C
+#ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
+
+# Fix 'ordinal not in range' error.
+ENV LC_CTYPE en_US.UTF-8
+ENV LANG en_US.UTF-8
 
 ENV pip_packages "ansible pymysql"
 
@@ -11,6 +15,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        apt-utils \
        locales \
+       language-pack-en \
        libffi-dev \
        libssl-dev \
        libyaml-dev \
