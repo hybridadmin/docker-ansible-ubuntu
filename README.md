@@ -13,7 +13,8 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`latest`, `focal`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/focal/Dockerfile)
+- [`jammy`, `devel`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/jammy/Dockerfile)
+- [`focal`, `latest`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/focal/Dockerfile)
 - [`bionic`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/bionic/Dockerfile)
 - [`xenial`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/xenial/Dockerfile)
 

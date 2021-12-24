@@ -1,5 +1,6 @@
 FROM ubuntu:xenial
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
+LABEL org.opencontainers.image.source="https://github.com/hybridadmin/docker-ansible-ubuntu"
 
 ENV pip_packages "ansible pyopenssl"
 
