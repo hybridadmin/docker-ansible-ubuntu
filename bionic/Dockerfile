@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LC_CTYPE en_US.UTF-8
 ENV LANG en_US.UTF-8
 
-ENV pip_packages "ansible pymysql"
+ENV pip_packages "ansible yamllint ansible-lint pymysql"
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
