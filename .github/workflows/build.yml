@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: ${{ matrix.distribution.image }}-${{ matrix.distribution.version }}
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       packages: write
       contents: read
@@ -18,21 +18,21 @@ jobs:
       matrix:
         distribution:
           - image: ubuntu
-            version: "xenial"
-            tags: "xenial"
-            platform: "linux/amd64"
-          - image: ubuntu
             version: "bionic"
             platform: "linux/amd64"
             tags: "bionic"
           - image: ubuntu
             version: "focal"
             platform: "linux/amd64"
-            tags: "focal,latest"
+            tags: "focal"
           - image: ubuntu
             version: "jammy"
             platform: "linux/amd64"
-            tags: "jammy,devel"
+            tags: "jammy"
+          - image: ubuntu
+            version: "noble"
+            platform: "linux/amd64"
+            tags: "noble,latest"
 
     steps:
       - name: Checkout repository
