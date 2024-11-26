@@ -63,10 +63,12 @@ jobs:
 
       - name: Test Docker images
         run: |
+          # cgroupsv2 fix - https://www.whexy.com/posts/cgroup-inside-containers
           container_id=$(mktemp)
           sudo docker run \
             --detach \
             --privileged \
+            --cgroupns=host \
             -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
             hybridadmin/ansible-${{ matrix.distribution.image }}:${{ matrix.distribution.version }} > "${container_id}"
           inspec exec tests/inspec --chef-license accept-silent -t docker://$(cat ${container_id})
