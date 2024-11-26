@@ -13,10 +13,10 @@
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`jammy`, `devel`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/jammy/Dockerfile)
-- [`focal`, `latest`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/focal/Dockerfile)
+- [`noble`, `latest`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/noble/Dockerfile)
+- [`jammy`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/jammy/Dockerfile)
+- [`focal`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/focal/Dockerfile)
 - [`bionic`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/bionic/Dockerfile)
-- [`xenial`](https://github.com/hybridadmin/docker-ansible-ubuntu/tree/main/xenial/Dockerfile)
 
 ## How to Build the image
 
@@ -38,7 +38,7 @@ docker pull hybridadmin/ansible-ubuntu:latest
 Run a container using the image with the following command:
 
 ```console
-docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro hybridadmin/ansible-ubuntu:latest
+docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cgroupns=host hybridadmin/ansible-ubuntu:latest
 ```
 
 Use ansible inside the container:
