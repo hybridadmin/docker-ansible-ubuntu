@@ -1,6 +1,6 @@
 # Ubuntu Docker Images with ansible and systemd
 
-![Build](https://github.com/hybridadmin/docker-ansible-ubuntu/workflows/Build/badge.svg?branch=main) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-ubuntu)
+![Build](https://img.shields.io/github/actions/workflow/status/hybridadmin/docker-ansible-ubuntu/build.yml) ![Docker Pulls](https://img.shields.io/docker/pulls/hybridadmin/ansible-ubuntu)
 
 > Ubuntu Docker images to be used for testing ansible playbooks and roles.
 
