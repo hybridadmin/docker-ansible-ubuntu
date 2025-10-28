@@ -25,7 +25,7 @@ jobs:
             version: "noble"
             platform: "linux/amd64"
             tags: "noble,latest"
-    uses: hybridorg/reuse-workflows/.github/workflows/build_push.yml@main
+    uses: hybridadmin/reuse-workflows/.github/workflows/build_push.yml@main
     secrets: inherit
     with:
       distro_image: '${{ matrix.distro.image }}'
