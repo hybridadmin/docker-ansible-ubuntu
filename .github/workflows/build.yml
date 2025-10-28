@@ -36,7 +36,7 @@ jobs:
   run_update_readme:
     needs:
       - run_molecule_test
-    uses: hybridorg/reuse-workflows/.github/workflows/update_readme.yml@main
+    uses: hybridadmin/reuse-workflows/.github/workflows/update_readme.yml@main
     secrets: inherit
     with:
       repo_name: 'hybridadmin/ansible-debian'
