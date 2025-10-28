@@ -11,19 +11,19 @@ jobs:
         distro:
           - image: ubuntu
             version: "bionic"
-            platform: "linux/amd64"
+            platform: "linux/amd64,linux/arm64"
             tags: "bionic"
           - image: ubuntu
             version: "focal"
-            platform: "linux/amd64"
+            platform: "linux/amd64,linux/arm64"
             tags: "focal"
           - image: ubuntu
             version: "jammy"
-            platform: "linux/amd64"
+            platform: "linux/amd64,linux/arm64"
             tags: "jammy"
           - image: ubuntu
             version: "noble"
-            platform: "linux/amd64"
+            platform: "linux/amd64,linux/arm64"
             tags: "noble,latest"
     uses: hybridadmin/reuse-workflows/.github/workflows/build_push.yml@main
     secrets: inherit
