@@ -15,6 +15,7 @@ ENV pip_packages "ansible yamllint ansible-lint pymysql"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        apt-utils \
+       gcc-aarch64-linux-gnu \
        locales \
        language-pack-en \
        libffi-dev \
