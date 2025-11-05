@@ -32,7 +32,8 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 RUN locale-gen en_US.UTF-8
 
 # Install Ansible via Pip.
-RUN python3 -m pip install $pip_packages
+RUN python3 -m pip install $pip_packages \
+   && ansible-galaxy collection install community.general
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
