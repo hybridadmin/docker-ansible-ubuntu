@@ -34,7 +34,7 @@ RUN locale-gen en_US.UTF-8
 
 # Install Ansible via Pip.
 RUN python3 -m pip install $pip_packages \
-   && ansible-galaxy collection install community.general
+   && ansible-galaxy collection install community.general -p /usr/share/ansible/roles
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible

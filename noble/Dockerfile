@@ -38,7 +38,7 @@ RUN sudo rm -rf /usr/lib/python3.12/EXTERNALLY-MANAGED
 
 # Install Ansible via Pip.
 RUN pip3 install $pip_packages \
-   && ansible-galaxy collection install community.general
+   && ansible-galaxy collection install community.general -p /usr/share/ansible/roles
 
 COPY initctl_faker .
 RUN chmod +x initctl_faker && rm -fr /sbin/initctl && ln -s /initctl_faker /sbin/initctl
