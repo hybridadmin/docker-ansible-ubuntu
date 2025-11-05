@@ -1,4 +1,5 @@
 FROM ubuntu:bionic
+
 LABEL maintainer="Tinashe Chikomo <tinashe@chikomo.net>"
 LABEL org.opencontainers.image.source="https://github.com/hybridadmin/docker-ansible-ubuntu"
 
